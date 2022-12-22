@@ -28,8 +28,8 @@ class AppRoute extends VRouteElementBuilder {
       context.vRouter.toNamed(paymentScreenRoute);
   static void toSuccessScreenRoute(BuildContext context) =>
       context.vRouter.toNamed(successScreenRoute);
-  static void toDetailScreenRoute(BuildContext context) =>
-      context.vRouter.toNamed(detailScreenRoute);
+  static void toDetailScreenRoute(BuildContext context, String ref) =>
+      context.vRouter.toNamed(detailScreenRoute, pathParameters: {'ref': ref});
 
   @override
   List<VRouteElement> buildRoutes() {
@@ -45,7 +45,7 @@ class AppRoute extends VRouteElementBuilder {
               widget: const MenuPage(),
               stackedRoutes: [
                 VWidget(
-                    path: 'detail',
+                    path: 'detail/:ref',
                     name: detailScreenRoute,
                     widget: const DetailPage()),
               ]),

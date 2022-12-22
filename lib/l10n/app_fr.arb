@@ -2,5 +2,7 @@
     "menu": "Menu",
     "@menu":{},
     "cart": "Panier",
-    "@cart":{}
+    "@cart":{},
+    "tryagain": "Erreur, réessayer",
+    "@tryagain":{}
 }

@@ -1,6 +1,8 @@
 {
-"menu": "Menu",
-"@menu":{},
-"cart": "Cart",
-"@cart":{}
+    "menu": "Menu",
+    "@menu":{},
+    "cart": "Cart",
+    "@cart":{},
+    "tryagain": "Error, try again",
+    "@tryagain":{}
 }
