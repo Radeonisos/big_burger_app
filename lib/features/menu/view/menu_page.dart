@@ -1,4 +1,5 @@
 import 'package:big_burger_app/common/utils/convert_cost.dart';
+import 'package:big_burger_app/common/view/title_text.dart';
 import 'package:big_burger_app/core/app_router.dart';
 import 'package:big_burger_app/features/menu/models/menu_model_api.dart';
 import 'package:big_burger_app/features/menu/services/menu_service.dart';
@@ -19,22 +20,11 @@ class _MenuPageState extends State<MenuPage> {
     List<MenuModelAPI>? menu = context.watch<MenuService>().menuList;
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Big Burger',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
+        const TitleText('Big Burger'),
         menu == null
             ? ElevatedButton(
                 onPressed: () => context.read<MenuService>().getMenusFromApi(),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 child: Text(AppLocalizations.of(context)!.tryagain))
             : menu.isEmpty
                 ? const CircularProgressIndicator()

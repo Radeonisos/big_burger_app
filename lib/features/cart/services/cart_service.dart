@@ -54,4 +54,8 @@ class CartService extends ChangeNotifier {
     }
     return ConverCost.getCost(amount);
   }
+
+  void initCart() {
+    cartList = [];
+  }
 }

@@ -24,7 +24,7 @@ class CartElement extends StatelessWidget {
                 children: [
                   Text(
                     menuModelAPI.title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                   ),

@@ -17,15 +17,3 @@ class MenuModelAPI with _$MenuModelAPI {
   factory MenuModelAPI.fromJson(Map<String, dynamic> json) =>
       _$MenuModelAPIFromJson(json);
 }
-
-/*
-
-{
-	"ref": "1",
-	"title": "The Big Burger",
-	"description": "Un classique mais tellement bon." || null,
-	"thumbnail": "https://uad.io/bigburger/images/1.png" || null,
-	"price": 92820
-	}
-
- */

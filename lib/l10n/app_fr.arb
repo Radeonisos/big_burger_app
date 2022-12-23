@@ -4,5 +4,19 @@
     "cart": "Panier",
     "@cart":{},
     "tryagain": "Erreur, réessayer",
-    "@tryagain":{}
+    "@tryagain":{},
+    "payment": "Paiement",
+    "@payment": {},
+    "congratulation": "Bravo! Vous pouvez allez chercher votre commande",
+    "@congratulation": {},
+    "anotherMenu": "Une autre commande ?",
+    "@anotherMenu": {},
+    "add": "Ajouter",
+    "@add": {},
+    "noCart": "Rien dans le panier",
+    "@noCart": {},
+    "total": "Total",
+    "@total": {},
+    "pay": "Payer",
+    "@pay": {}
 }

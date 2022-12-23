@@ -4,5 +4,17 @@
     "cart": "Cart",
     "@cart":{},
     "tryagain": "Error, try again",
-    "@tryagain":{}
+    "@tryagain":{},
+    "congratulation": "Cheer! You can pick up your order",
+    "@congratulation": {},
+    "anotherMenu": "Another order?",
+    "@anotherMenu": {},
+    "add": "Add",
+    "@add": {},
+    "noCart": "Nothing in the shopping cart",
+    "@noCart": {},
+    "total": "Total",
+    "@total": {},
+    "pay": "Pay",
+    "@pay": {}
 }

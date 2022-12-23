@@ -47,6 +47,15 @@ class AppRoute extends VRouteElementBuilder {
                 VWidget(
                     path: 'detail/:ref',
                     name: detailScreenRoute,
+                    transitionDuration: const Duration(milliseconds: 300),
+                    buildTransition: (animation, _, child) => ClipRect(
+                            child: SlideTransition(
+                          position: Tween(
+                                  begin: const Offset(1, 0),
+                                  end: const Offset(0, 0))
+                              .animate(animation),
+                          child: child,
+                        )),
                     widget: const DetailPage()),
               ]),
           VWidget(

@@ -4,6 +4,7 @@ import 'package:big_burger_app/features/cart/services/cart_service.dart';
 import 'package:big_burger_app/features/menu/models/menu_model_api.dart';
 import 'package:big_burger_app/features/menu/services/menu_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:vrouter/vrouter.dart';
 
@@ -28,14 +29,15 @@ class _DetailPageState extends State<DetailPage> {
             children: [
               Container(
                 color: Colors.blueGrey,
+                width: double.infinity,
                 child: menuModelAPI.thumbnail == null
                     ? const FlutterLogo(
-                        size: 100,
+                        size: 200,
                       )
                     : Image.network(
                         menuModelAPI.thumbnail!,
                         errorBuilder: (_, __, ___) => const FlutterLogo(
-                          size: 100,
+                          size: 200,
                         ),
                       ),
               ),
@@ -136,7 +138,7 @@ class _DetailPageState extends State<DetailPage> {
                     .addProducts(menuModelAPI.ref, numberOfItem);
                 AppRoute.toMainScreenRoute(context);
               },
-              child: Text('Ajouter '),
+              child: Text(AppLocalizations.of(context)!.add),
             ),
           ),
         ],

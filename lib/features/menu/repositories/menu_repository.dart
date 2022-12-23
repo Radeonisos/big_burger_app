@@ -5,19 +5,14 @@ import 'package:http/http.dart' as http;
 
 class MenuRepository {
   Future<List<MenuModelAPI>?> getMenusFromApi() async {
-    print('request');
-
     var url = Uri.https('uad.io', '/bigburger');
-    print('request start');
-    print(url.path);
     var response = await http.get(url);
-    print(response.statusCode);
     if (response.statusCode == 200) {
-      List<MenuModelAPI> _menus = [];
+      List<MenuModelAPI> menus = [];
       for (var e in convert.jsonDecode(response.body)) {
-        _menus.add(MenuModelAPI.fromJson(e));
+        menus.add(MenuModelAPI.fromJson(e));
       }
-      return _menus;
+      return menus;
     }
     return null;
   }
